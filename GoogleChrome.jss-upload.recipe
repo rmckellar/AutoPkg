@@ -9,9 +9,7 @@
     <key>Input</key>
     <dict>
         <key>CATEGORY</key>
-        <string>Applications</string>
-        <key>NAME</key>
-        <string>Google Chrome</string>
+        <string>Browsers</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.0</string>
@@ -20,17 +18,22 @@
     <key>Process</key>
     <array>
         <dict>
+            <key>Processor</key>
+            <string>com.github.grahampugh.jamf-upload.processors/JamfPackageUploader</string>
             <key>Arguments</key>
             <dict>
                 <key>category</key>
                 <string>%CATEGORY%</string>
-                <key>prod_name</key>
-                <string>%NAME%</string>
-                <key>pkg_path</key>
-                <string>%pkg_path%</string>
             </dict>
+        </dict>
+        <dict>
             <key>Processor</key>
-            <string>com.github.grahampugh.jamf-upload.processors/JamfPackageUploader</string>
+            <string>com.github.grahampugh.jamf-upload.processors/JamfCategoryUploader</string>
+            <key>Arguments</key>
+            <dict>
+                <key>pkg_category</key>
+                <string>%CATEGORY%</string>
+            </dict>
         </dict>
     </array>
 </dict>
