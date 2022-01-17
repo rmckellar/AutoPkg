@@ -30,7 +30,7 @@
                 <string>%pkg_path%</string>
             </dict>
             <key>Processor</key>
-            <string>JSSImporter</string>
+            <string>com.github.grahampugh.jamf-upload.processors/JamfPackageUploader</string>
         </dict>
     </array>
 </dict>
