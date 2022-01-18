@@ -11,7 +11,7 @@
         <key>CATEGORY</key>
         <string>Digital Media</string>
         <key>NAME</key>
-        <string>VLC Plyer</string>
+        <string>VLC Player</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.0</string>
