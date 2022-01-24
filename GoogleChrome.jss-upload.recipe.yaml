@@ -7,7 +7,7 @@ runs-on: self-hosted
 Input:
   NAME: Google Chrome
   CATEGORY: Browsers
-  UPDATE_PREDICATE: "pkg_uploaded == True"
+  UPDATE_PREDICATE: "pkg_uploaded == False"
 
 Process:
   - Processor: com.github.grahampugh.jamf-upload.processors/JamfCategoryUploader
@@ -15,9 +15,5 @@ Process:
       category_name: "%CATEGORY%"
 
   - Processor: com.github.grahampugh.jamf-upload.processors/JamfPackageUploader
-
-  - Processor: StopProcessingIf
-    Arguments:
-      predicate: "%UPDATE_PREDICATE%"
 
   - Processor: com.github.grahampugh.recipes.commonprocessors/VersionRegexGenerator
