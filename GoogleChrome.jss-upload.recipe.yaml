@@ -2,6 +2,7 @@ Description: Downloads the latest version and makes a pkg. Then, uploads the pac
 Identifier: com.grcs.jss-upload.GoogleChrome
 MinimumVersion: "2.3"
 ParentRecipe: com.github.autopkg.pkg.googlechrome
+runs-on: self-hosted
 
 Input:
   NAME: Google Chrome
