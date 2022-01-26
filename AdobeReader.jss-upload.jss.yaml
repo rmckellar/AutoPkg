@@ -1,0 +1,17 @@
+Description: Downloads the latest version and makes a pkg. Then, uploads the package to the Jamf Pro Server and creates a Self Service Policy and Smart Group.
+Identifier: com.grcs.jss-upload.jss.AdobeReader
+MinimumVersion: "2.3"
+ParentRecipe: com.github.autopkg.pkg.AdobeReader
+
+Input:
+  NAME: Adobe Reader
+  CATEGORY: Adobe
+
+Process:
+  - Processor: com.github.grahampugh.jamf-upload.processors/JamfCategoryUploader
+    Arguments:
+      category_name: "%CATEGORY%"
+
+  - Processor: com.github.grahampugh.jamf-upload.processors/JamfPackageUploader
+
+  - Processor: com.github.grahampugh.recipes.commonprocessors/VersionRegexGenerator
