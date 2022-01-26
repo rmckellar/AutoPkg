@@ -15,7 +15,4 @@ Process:
   - Processor: com.github.grahampugh.jamf-upload.processors/JamfPackageUploader
 
   - Processor: com.github.grahampugh.recipes.commonprocessors/VersionRegexGenerator
-  
-  -Processor: com.github.grahampugh.recipes.postprocessors/Slacker
-    Arguments:
-      webhook_url: https://hooks.slack.com/services/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
+
