@@ -1,0 +1,17 @@
+Description: Downloads the latest version and makes a pkg. Then, uploads the package to the Jamf Pro Server and creates a Self Service Policy and Smart Group.
+Identifier: com.grcs.jss-upload.OracleJava8
+MinimumVersion: "2.3"
+ParentRecipe: com.github.autopkg.pkg.OracleJava8
+
+Input:
+  NAME: Java 8
+  CATEGORY: Browser Plug-Ins
+
+Process:
+  - Processor: com.github.grahampugh.jamf-upload.processors/JamfCategoryUploader
+    Arguments:
+      category_name: "%CATEGORY%"
+
+  - Processor: com.github.grahampugh.jamf-upload.processors/JamfPackageUploader
+
+  - Processor: com.github.grahampugh.recipes.commonprocessors/VersionRegexGenerator
