@@ -13,6 +13,3 @@ Process:
       category_name: "%CATEGORY%"
 
   - Processor: com.github.grahampugh.jamf-upload.processors/JamfPackageUploader
-
-  - Processor: com.github.grahampugh.recipes.commonprocessors/VersionRegexGenerator
-
